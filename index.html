@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Online Tools</title>
+<style>
+body{font-family:Arial;text-align:center;background:#f2f2f2}
+.box{background:white;padding:20px;margin:20px;border-radius:10px}
+button{padding:10px 20px;background:blue;color:white;border:none;border-radius:5px}
+</style>
+</head>
+
+<body>
+
+<h1>Free Online Tools</h1>
+
+<div class="box">
+<h3>Word Counter</h3>
+<textarea id="text" rows="5" cols="40"></textarea><br><br>
+<button onclick="count()">Count Words</button>
+<p id="result"></p>
+</div>
+
+<script>
+function count(){
+let text=document.getElementById("text").value;
+let words=text.split(" ").length;
+document.getElementById("result").innerHTML="Words: "+words;
+}
+</script>
+
+</body>
+</html>
